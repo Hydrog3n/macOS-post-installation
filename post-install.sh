@@ -41,73 +41,37 @@ brew tap caskroom/cask
 ## Installations des logiciels
 echo 'Installation des outils en ligne de commande.'
 brew install wget cmake coreutils psutils git ffmpeg node libssh
-brew tap zyedidia/micro
-brew install micro
-gem install sass
 
 echo 'Installation des apps : utilitaires.'
-brew cask install alfred sizeup typinator istat-menus google-drive seafile-client flux appcleaner backblaze hosts carbon-copy-cloner aerial
-install "FastScripts"
-install "PopClip"
+brew cask install istat-menus google-drive flux appcleaner dropbox docker
 install "Amphetamine"
 install "MacTracker"
 
 echo "Ouverture de Google Drive pour commencer la synchronisation"
 open -a Google\ Drive
 
-# Installation manuelle de SearchLink
-cd /tmp/ && curl -O http://cdn3.brettterpstra.com/downloads/SearchLink2.2.3.zip && unzip SearchLink2.2.3.zip && cd SearchLink2.2.3 && mv SearchLink.workflow ~/Library/Services/
 
 echo 'Installation des apps : bureautique.'
-install "iA Writer"
-install "Ulysses"
-install "Marked"
 install "Pages"
 install "Keynote"
 install "Numbers"
-install "Soulver"
-install "Simplenote"
 brew cask install evernote
 
 echo 'Installation des apps : développement.'
-brew install hugo
-brew cask install iterm2 github-desktop textmate tower coda atom wordpresscom transmit
+brew cask install iterm2 textmate atom transmit
 install "Xcode"
-install "TextWrangler"
-install "Quiver"
-install "JSON Helper for AppleScript"
-install "Twitter Scripter"
 
 
 echo 'Installation des apps : communication.'
-install "Reeder"
-install "Twitter"
 install "Tweetbot"
 install "1Password"
-install "Wunderlist"
-brew cask install google-chrome firefox mattermost transmission
+install "Slack"
+brew cask install google-chrome transmission
 
 
 echo 'Installation des apps : photo et vidéo.'
-brew cask install handbrake handbrakecli imageoptim sketch google-photos-backup qlimagesize
 install "Acorn"
-install "Pixelmator"
 install "JPEG Mini"
-install "Napkin"
-install "Precise Screenshot"
-install "Final Cut Pro"
-install "Logic Pro X"
-install "Motion"
-
-
-echo 'Installation des apps : loisir.'
-brew install mpv --with-bundle
-brew linkapps mpv # Pour avoir un .app dans le dossier des Applications
-install "TunesArt"
-brew cask install vox xld beardedspice
-
-# DockArt (installation manuelle, faute de mieux)
-cd /tmp/ && curl -O http://www.splook.com/Software/DockArt_files/DockArt2.zip && unzip DockArt2.zip && cd DockArt\ 2.2 && mv DockArt.bundle ~/Library/iTunes/iTunes\ Plug-ins
 
 
 ## ************************* CONFIGURATION ********************************
@@ -131,7 +95,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 # Recherche dans le dossier en cours par défaut
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Coup d'œîl : sélection de texte
+# Coup d'oeil : sélection de texte
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Pas de création de fichiers .DS_STORE
@@ -157,17 +121,17 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 ## COINS ACTIFS
 # En haut à gauche : bureau
-defaults write com.apple.dock wvous-tl-corner -int 4
-defaults write com.apple.dock wvous-tl-modifier -int 0
+#defaults write com.apple.dock wvous-tl-corner -int 4
+#defaults write com.apple.dock wvous-tl-modifier -int 0
 # En haut à droite : bureau
-defaults write com.apple.dock wvous-tr-corner -int 4
-defaults write com.apple.dock wvous-tr-modifier -int 0
+#defaults write com.apple.dock wvous-tr-corner -int 4
+#defaults write com.apple.dock wvous-tr-modifier -int 0
 # En bas à gauche : fenêtres de l'application
-defaults write com.apple.dock wvous-bl-corner -int 3
-defaults write com.apple.dock wvous-bl-modifier -int 0
+#defaults write com.apple.dock wvous-bl-corner -int 3
+#defaults write com.apple.dock wvous-bl-modifier -int 0
 # En bas à droite : Mission Control
-defaults write com.apple.dock wvous-br-corner -int 2
-defaults write com.apple.dock wvous-br-modifier -int 0
+#defaults write com.apple.dock wvous-br-corner -int 2
+#defaults write com.apple.dock wvous-br-modifier -int 0
 
 ## CLAVIER ET TRACKPAD
 
@@ -206,7 +170,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool YES
 defaults write com.apple.TextEdit RichText -int 0
 
 # Raccourci pour exporter 
-sudo defaults write -g NSUserKeyEquivalents '{"Export…"="@$e";"Exporter…"="@$e";}'
+#sudo defaults write -g NSUserKeyEquivalents '{"Export…"="@$e";"Exporter…"="@$e";}'
 
 ## ************ Fin de l'installation *********
 echo "Finder et Dock relancés… redémarrage nécessaire pour terminer."
