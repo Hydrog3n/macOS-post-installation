@@ -58,7 +58,7 @@ install "Numbers"
 brew cask install evernote
 
 echo 'Installation des apps : développement.'
-brew cask install iterm2 textmate atom transmit
+brew cask install iterm2 textmate atom transmit visual-studio-code
 install "Xcode"
 
 
