@@ -47,8 +47,8 @@ brew cask install istat-menus google-drive flux appcleaner dropbox docker
 install "Amphetamine"
 install "MacTracker"
 
-echo "Ouverture de Google Drive pour commencer la synchronisation"
-open -a Google\ Drive
+echo "Ouverture de Dropbox pour commencer la synchronisation"
+open -a Dropbox
 
 
 echo 'Installation des apps : bureautique.'
@@ -58,7 +58,8 @@ install "Numbers"
 brew cask install evernote
 
 echo 'Installation des apps : développement.'
-brew cask install iterm2 textmate atom transmit visual-studio-code
+brew cask install iterm2 textmate atom transmit visual-studio-code intellij-idea phpstorm webstorm android-studio
+
 install "Xcode"
 
 
