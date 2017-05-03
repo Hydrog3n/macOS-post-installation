@@ -43,7 +43,8 @@ echo 'Installation des outils en ligne de commande.'
 brew install wget cmake coreutils psutils git ffmpeg node libssh
 
 echo 'Installation des apps : utilitaires.'
-brew cask install istat-menus google-drive flux appcleaner dropbox docker vmware-fusion
+brew cask install istat-menus flux appcleaner dropbox docker vmware-fusion applepi-baker
+
 install "Amphetamine"
 install "MacTracker"
 
@@ -55,11 +56,13 @@ echo 'Installation des apps : bureautique.'
 install "Pages"
 install "Keynote"
 install "Numbers"
-brew cask install evernote
+brew cask install microsoft-office
+
 
 echo 'Installation des apps : développement.'
 brew cask install iterm2 textmate atom transmit visual-studio-code intellij-idea phpstorm webstorm android-studio \
-sequel-pro
+sequel-pro keybase
+brew install heroku
 install "Xcode"
 
 
