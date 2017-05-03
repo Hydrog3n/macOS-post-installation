@@ -43,7 +43,7 @@ echo 'Installation des outils en ligne de commande.'
 brew install wget cmake coreutils psutils git ffmpeg node libssh
 
 echo 'Installation des apps : utilitaires.'
-brew cask install istat-menus google-drive flux appcleaner dropbox docker
+brew cask install istat-menus google-drive flux appcleaner dropbox docker vmware-fusion
 install "Amphetamine"
 install "MacTracker"
 
@@ -58,16 +58,15 @@ install "Numbers"
 brew cask install evernote
 
 echo 'Installation des apps : développement.'
-brew cask install iterm2 textmate atom transmit visual-studio-code intellij-idea phpstorm webstorm android-studio
-
+brew cask install iterm2 textmate atom transmit visual-studio-code intellij-idea phpstorm webstorm android-studio \
+sequel-pro
 install "Xcode"
 
 
 echo 'Installation des apps : communication.'
 install "Tweetbot"
 install "1Password"
-install "Slack"
-brew cask install google-chrome transmission
+brew cask install google-chrome transmission slack whatsapp 
 
 
 echo 'Installation des apps : photo et vidéo.'
